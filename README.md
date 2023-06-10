@@ -54,7 +54,7 @@ type Mutation {
 }
 
 type Query {
-    getProducts : ProductConnection
+    getProducts : ProductConnection!
 }
 ```
 
