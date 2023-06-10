@@ -5,6 +5,13 @@ This application demonstrates the Spring GraphQL error.
 
 The error appears when Connection is used, and Page<?>(spring data) is returned from the @MutationMapping controller.
 
+```
+The field at path '/createProduct/edges' was declared as a non null type, but the code involved in retrieving
+data has wrongly returned a null value. The graphql specification requires that the parent field be set to null,
+or if that is non nullable that it bubble up null to its parent and so on.
+The non-nullable type is '[ProductEdge]' within parent type 'ProductConnection'
+```
+
 But if you return query from the controller instead of mutation, then there is no error.
 
 
@@ -109,3 +116,14 @@ http://127.0.0.1:8080/graphiql
 ```
 
 The application can also be built in the IDE(intelij.. etc).
+
+
+## Lib version
+
+```
+spring boot 3.1.0
+spring-graphql 1.2.0
+graphql-java 20.2
+JDK 17
+```
+
