@@ -1,0 +1,15 @@
+type Product {
+    title: String
+}
+
+type Mutation {
+
+    createProduct : ProductConnection!
+
+}
+
+type Query {
+
+    getProducts : ProductConnection
+
+}
